@@ -32,8 +32,8 @@ export default async function Home() {
       <Experience />
       <Skills />
       <Projects />
-      <Education />
       <Blog blogs={blogs} />
+      <Education />
       <ContactSection />
     </div>
   )

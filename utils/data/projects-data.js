@@ -1,52 +1,41 @@
 export const projectsData = [
     {
         id: 1,
+        
         name: 'OWN IT',
-        description: "Me and my team built an AI-powered Personal Task management Web App. We have developed this project using Node JS, Typescript, Javascript, Gemini Flash 2.0, and Supabase. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        tools: ['Express', 'MongoDB', 'Gemini Flash 2.0', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
+        description: "Me and my team built an AI-powered Personal Task management Web App. We have developed this project using Node JS, Typescript, Javascript, Gemini Flash 2.0, and Supabase. Built AI assistants using Google Gemini's latest model and trained using our dataset. The app allows users to manage their tasks efficiently with AI assistance.",
+        tools: ['Node JS', 'JavaScript', 'Gemini Flash 2.0', 'Figma', 'VS Code', 'Next JS', 'TypeScript', 'Tailwind CSS', 'Supabase'],
         role: 'Assistant Developer',
         code: '',
         demo: '',
     },
     {
         id: 2,
-        name: 'Travel Agency App',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
-        role: 'Full Stack Developer',
+        name: 'TICTACTOE',
+        description: 'This is a full-stack web application that I developed using html, css, and javascript. It is a simple Tic Tac Toe game where users can play against the computer. The game features a user-friendly interface and allows players to enjoy a classic game of Tic Tac Toe.',
+        tools: ['HTML', 'CSS', 'JavaScript'],
+        role: 'Front-end Developer',
         code: '',
         demo: '',
     },
     {
         id: 3,
-        name: 'AI Powered Real Estate',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
+        name: 'Todo AI',
+        description: 'To do List that has AI capabilities. It allows users to manage their tasks efficiently with the help of AI. It has CRUD ',
+        tools: ['React', 'Tailwind CSS', 'JavaScript', 'Next JS', 'Express', 'TypeScript', 'MongoDB', 'OpenAI API'],
         code: '',
-        role: 'Full Stack Developer',
+        role: 'Front-end Developer Developer',
         demo: '',
     },
     {
         id: 4,
-        name: 'Newsroom Management',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        name: 'Ticketing System',
+        description: "A ticketing system that allows users to create, view, and manage tickets. It is built using React, Node.js, and MongoDB. The system provides a user-friendly interface for managing tickets and includes features such as ticket creation, status updates, and user authentication.",
+        tools: ['React', 'JavaScript', 'Tailwind CSS'],
         code: '',
         demo: '',
-        role: 'Full Stack Developer',
+        role: 'Front-end Developer',
     }
 ];
 
 
-// Do not remove any property.
-// Leave it blank instead as shown below
-
-// {
-//     id: 1,
-//     name: '',
-//     description: "",
-//     tools: [],
-//     role: '',
-//     code: '',
-//     demo: '',
-// },

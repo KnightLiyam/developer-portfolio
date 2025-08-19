@@ -11,8 +11,8 @@ export const personalData = {
   facebook: 'https://www.facebook.com/william.marino.944/',
   linkedIn: 'https://www.linkedin.com/in/knight-william-dimapilis/',
   twitter: '',
-  stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
+  stackOverflow: '',
   leetcode: "https://leetcode.com/u/Naitou/",
-  devUsername: "said7388",
-  resume: "/Dimapilis_Knight_William_Resume.pdf",
+  devUsername: "",
+  resume: "/Resume.pdf",
 }
