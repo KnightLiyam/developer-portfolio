@@ -1,11 +1,28 @@
+"use client";
 // @flow strict
 
 import * as React from 'react';
+import Image from 'next/image';
 
-function ProjectCard({ project }) {
-
+function ProjectCard({ project, onImageClick }) {
   return (
     <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
+      {/* Project Image */}
+      {project.image && (
+        <div
+          className="w-full h-48 relative rounded-t-lg overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105"
+          onClick={() => onImageClick && onImageClick(project.image)}
+        >
+          <Image
+            src={project.image}
+            alt={project.name + " demo"}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            priority
+          />
+        </div>
+      )}
       <div className="flex flex-row">
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
@@ -34,7 +51,6 @@ function ProjectCard({ project }) {
             <span className="text-amber-300">{project.name}</span>
             <span className="text-gray-400">{`',`}</span>
           </div>
-
           <div className="ml-4 lg:ml-8 mr-2">
             <span className=" text-white">tools:</span>
             <span className="text-gray-400">{` ['`}</span>
@@ -66,6 +82,6 @@ function ProjectCard({ project }) {
       </div>
     </div>
   );
-};
+}
 
 export default ProjectCard;

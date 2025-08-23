@@ -8,6 +8,7 @@ export const projectsData = [
         role: 'Assistant Developer',
         code: '',
         demo: '',
+        image: '/images/OWN!T_DB.png',
     },
     {
         id: 2,
