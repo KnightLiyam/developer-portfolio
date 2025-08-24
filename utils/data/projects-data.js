@@ -18,6 +18,7 @@ export const projectsData = [
         role: 'Front-end Developer',
         code: '',
         demo: '',
+        image: '/images/TicTacToe.png',
     },
     {
         id: 3,
@@ -36,6 +37,7 @@ export const projectsData = [
         code: '',
         demo: '',
         role: 'Front-end Developer',
+        image: '/images/TicketingSysClone.png',
     }
 ];
 
