@@ -2,6 +2,8 @@
 import Link from 'next/link';
 import { CgGitFork } from "react-icons/cg";
 import { IoStar } from "react-icons/io5";
+import { BsLinkedin } from "react-icons/bs";
+
 
 function Footer() {
   return (
@@ -17,11 +19,10 @@ function Footer() {
           <div className="flex items-center gap-5">
             <Link
               target="_blank"
-              href="https://github.com/said7388/developer-portfolio"
+              href="https://www.linkedin.com/in/knight-william-dimapilis/"
               className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
             >
-              <IoStar />
-              <span>Star</span>
+              <BsLinkedin size={30} />
             </Link>
             <Link
               target="_blank"

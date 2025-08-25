@@ -9,6 +9,10 @@ import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 
+
+
+
+
 function HeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
@@ -61,7 +65,7 @@ function HeroSection() {
               <SiLeetcode size={30} />
             </Link>
             <Link
-              href={personalData.twitter || "/404"}
+              href={personalData.twitter || '/404'}
               target='_blank'
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >

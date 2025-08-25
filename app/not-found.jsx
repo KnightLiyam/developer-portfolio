@@ -2,7 +2,7 @@
 
 import Lottie from "lottie-react";
 import Link from "next/link";
-import errorAnimation from "../assets/error.json";
+import errorAnimation from "./assets/error.json";
 
 function Page() {
   return (
