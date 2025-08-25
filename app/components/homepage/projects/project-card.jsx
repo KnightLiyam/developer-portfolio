@@ -23,6 +23,14 @@ function ProjectCard({ project, onImageClick }) {
           />
         </div>
       )}
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:underline font-bold"
+      >
+        {project.name}
+      </a>
       <div className="flex flex-row">
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>

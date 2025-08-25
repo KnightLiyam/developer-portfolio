@@ -1,8 +1,9 @@
 export const projectsData = [
     {
         id: 1,
-        
+
         name: 'OWN IT',
+        url: 'https://own-it.starta.haus/',
         description: "Me and my team built an AI-powered Personal Task management Web App. We have developed this project using Node JS, Typescript, Javascript, Gemini Flash 2.0, and Supabase. Built AI assistants using Google Gemini's latest model and trained using our dataset. The app allows users to manage their tasks efficiently with AI assistance.",
         tools: ['Node JS', 'JavaScript', 'Gemini Flash 2.0', 'Figma', 'VS Code', 'Next JS', 'TypeScript', 'Tailwind CSS', 'Supabase'],
         role: 'Assistant Developer',

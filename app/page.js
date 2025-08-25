@@ -7,6 +7,8 @@ import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
+import BlogsPage from "./blog/page";
+
 
 async function getData() {
   const res = await fetch('https://dev.to/api/articles?username=KnightLiyam', { cache: 'no-store' });
@@ -33,6 +35,7 @@ export default async function Home() {
       <Skills />
       <Projects />
       <Education />
+      <BlogsPage/>
       <ContactSection />
     </div>
   )
