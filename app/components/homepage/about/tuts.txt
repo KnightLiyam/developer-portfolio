@@ -1,0 +1,149 @@
+import turtle
+import time
+
+# --- Setup screen ---
+screen = turtle.Screen()
+screen.bgcolor("gray")
+screen.tracer(0)
+
+# --- Player 1 (Blue) ---
+t = turtle.Turtle()
+t.speed(0)
+t.shape("turtle")
+t.color("blue")
+t.penup()
+t.setposition(120, 210)
+t.setheading(270)
+
+# --- Player 2 (Red) ---
+u = turtle.Turtle()
+u.speed(0)
+u.shape("turtle")
+u.color("red")
+u.penup()
+u.setposition(-120, 210)
+u.setheading(270)
+
+# --- Bullets ---
+bullets_p1 = []
+bullets_p2 = []
+
+# --- Movement speed (can increase on power-up) ---
+move_speed_p1 = 10
+move_speed_p2 = 10
+bullet_speed_p1 = 15
+bullet_speed_p2 = 15
+
+# --- Power-up star (spawn immediately at start) ---
+star = turtle.Turtle()
+star.shape("star")
+star.color("yellow")
+star.penup()
+star.setposition(0, 0)   # Spawn at middle
+# star is visible right away
+
+# --- Movement functions ---
+def turtle_move1():
+    t.forward(move_speed_p1)
+
+def turtle_move2():
+    u.forward(move_speed_p2)
+
+def face_south1(): t.setheading(270)
+def face_north1(): t.setheading(90)
+def face_east1():  t.setheading(0)
+def face_west1():  t.setheading(180)
+
+def face_south2(): u.setheading(270)
+def face_north2(): u.setheading(90)
+def face_east2():  u.setheading(0)
+def face_west2():  u.setheading(180)
+
+# --- Shooting functions ---
+def shoot1():
+    bullet = turtle.Turtle()
+    bullet.speed(0)
+    bullet.shape("triangle")
+    bullet.color("cyan")
+    bullet.penup()
+    bullet.setposition(t.xcor(), t.ycor())
+    bullet.setheading(t.heading())
+    bullets_p1.append(bullet)
+
+def shoot2():
+    bullet = turtle.Turtle()
+    bullet.speed(0)
+    bullet.shape("triangle")
+    bullet.color("orange")
+    bullet.penup()
+    bullet.setposition(u.xcor(), u.ycor())
+    bullet.setheading(u.heading())
+    bullets_p2.append(bullet)
+
+# --- Key bindings ---
+screen.listen()
+screen.onkey(face_south1, "Down")
+screen.onkey(face_north1, "Up")
+screen.onkey(face_east1, "Right")
+screen.onkey(face_west1, "Left")
+screen.onkey(turtle_move1, "l")
+screen.onkey(shoot1, "k")   # Player 1 shoot
+
+screen.onkey(face_south2, "s")
+screen.onkey(face_north2, "w")
+screen.onkey(face_east2, "d")
+screen.onkey(face_west2, "a")
+screen.onkey(turtle_move2, "x")
+screen.onkey(shoot2, "q")   # Player 2 shoot
+
+# --- Collision detection ---
+def check_collision(bullet, target):
+    return bullet.distance(target) < 20
+
+# --- Check power-up collision ---
+def check_star_pickup():
+    global move_speed_p1, move_speed_p2, bullet_speed_p1, bullet_speed_p2
+    if star.isvisible():
+        if t.distance(star) < 20:
+            print("Player 1 got the star! Power-up activated!")
+            move_speed_p1 = 20
+            bullet_speed_p1 = 25
+            star.hideturtle()
+        elif u.distance(star) < 20:
+            print("Player 2 got the star! Power-up activated!")
+            move_speed_p2 = 20
+            bullet_speed_p2 = 25
+            star.hideturtle()
+
+# --- Game loop ---
+while True:
+    screen.update()
+
+    # Check if a player picks the star
+    check_star_pickup()
+
+    # Move Player 1 bullets
+    for bullet in bullets_p1[:]:
+        bullet.forward(bullet_speed_p1)
+        if abs(bullet.xcor()) > 400 or abs(bullet.ycor()) > 300:
+            bullet.hideturtle()
+            bullets_p1.remove(bullet)
+        elif check_collision(bullet, u):
+            print("Player 1 hit Player 2!")
+            u.hideturtle()  # Hide Player 2
+            bullet.hideturtle()
+            bullets_p1.remove(bullet)
+
+    # Move Player 2 bullets
+    for bullet in bullets_p2[:]:
+        bullet.forward(bullet_speed_p2)
+        if abs(bullet.xcor()) > 400 or abs(bullet.ycor()) > 300:
+            bullet.hideturtle()
+            bullets_p2.remove(bullet)
+        elif check_collision(bullet, t):
+            print("Player 2 hit Player 1!")
+            t.hideturtle()  # Hide Player 1
+            bullet.hideturtle()
+            bullets_p2.remove(bullet)
+
+    time.sleep(0.03)
