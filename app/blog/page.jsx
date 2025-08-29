@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function BlogsPage() {
   return (
-    <div className="relative z-50 border-t my-12 lg:my-24 border-[#25213b] bg-[#181c2f]">
-      <Image
+    <div id="blog" data-aos="zoom-in-up" data-aos-delay="100" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b] ">
+      <Image 
         src="/section.svg"
         alt="Hero"
         width={1572}
@@ -18,7 +18,7 @@ export default function BlogsPage() {
         </div>
       </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
+      <div data-aos="zoom-in-up" data-aos-delay="100" className="flex justify-center my-5 lg:py-8">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
@@ -28,7 +28,7 @@ export default function BlogsPage() {
         </div>
       </div>
       <div className="py-8">
-        <div className="grid md:grid-cols-3 gap-10 lg:gap-16 px-4 lg:px-8">
+        <div data-aos="zoom-in-up" data-aos-delay="100" className="grid md:grid-cols-3 gap-10 lg:gap-16 px-4 lg:px-8">
           {myBlogs.slice(0, 3).map((blog) => (
             <Link
               href={`/blog/${blog.id}`}

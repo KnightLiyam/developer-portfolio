@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
-import experienceLottie from '../../../assets/lottie/code.json';
+import experienceLottie from '../../../assets/lottie/coding.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
@@ -36,14 +36,15 @@ function Experience() {
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
-            <div className="w-full h-full">
+            <div data-aos="zoom-in-up" data-aos-delay="100" className="w-full h-full">
               <AnimationLottie animationPath={experienceLottie} />
             </div>
           </div>
-          <div>
+          <div data-aos="fade-left" data-aos-delay="300">
             <div className="flex flex-col gap-6">
               {experiences.map(experience => (
                 <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
+                  
                   <div className="p-3 relative">
                     <Image
                       src="/blur-23.svg"

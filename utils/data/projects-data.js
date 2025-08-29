@@ -14,6 +14,7 @@ export const projectsData = [
     {
         id: 2,
         name: 'TICTACTOE',
+        url: 'https://github.com/KnightLiyam/Tic-Tac-Toe',
         description: 'This is a full-stack web application that I developed using html, css, and javascript. It is a simple Tic Tac Toe game where users can play against the computer. The game features a user-friendly interface and allows players to enjoy a classic game of Tic Tac Toe.',
         tools: ['HTML', 'CSS', 'JavaScript'],
         role: 'Front-end Developer',
@@ -23,12 +24,16 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: 'Todo AI',
-        description: 'To do List that has AI capabilities. It allows users to manage their tasks efficiently with the help of AI. It has CRUD ',
-        tools: ['React', 'Tailwind CSS', 'JavaScript', 'Next JS', 'Express', 'TypeScript', 'MongoDB', 'OpenAI API'],
+        name: 'My Portfolio',
+        description: 'A personal portfolio website to showcase my projects, skills, and experience. Built with React, Next.js, and Tailwind CSS, the site features a modern design and responsive layout. It includes sections for my bio, project highlights, and contact information.',
+        tools: ['React', 'Next JS', 'Tailwind CSS'],
         code: '',
-        role: 'Front-end Developer Developer',
+        role: 'Front-end Developer',
         demo: '',
+        image: '/images/MyPortfolio.png',
+        url: 'https://github.com/KnightLiyam/Tic-Tac-Toe',
+
+
     },
     {
         id: 4,
@@ -39,6 +44,8 @@ export const projectsData = [
         demo: '',
         role: 'Front-end Developer',
         image: '/images/TicketingSysClone.png',
+        url: 'https://github.com/KnightLiyam/Tic-Tac-Toe',
+
     }
 ];
 

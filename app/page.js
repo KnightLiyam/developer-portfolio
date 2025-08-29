@@ -1,4 +1,5 @@
 
+import AOSInitializer from "./components/AOSInitializer";
 import { personalData } from "@/utils/data/personal-data";
 import AboutSection from "./components/homepage/about";
 import ContactSection from "./components/homepage/contact";
@@ -29,13 +30,15 @@ export default async function Home() {
 
   return (
     <div suppressHydrationWarning >
+      <AOSInitializer />
+
       <HeroSection />
       <AboutSection />
       <Experience />
       <Skills />
       <Projects />
       <Education />
-      <BlogsPage/>
+      <BlogsPage />
       <ContactSection />
     </div>
   )

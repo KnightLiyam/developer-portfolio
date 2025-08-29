@@ -23,9 +23,9 @@ This capstone project has been so much more than a requirement. It’s been a jo
     },
     {
         id: 2,
-        title: "A Day in My Life as a Developer",
+        title: "How I Built My Portfolio Website",
         date: "2025-08-24",
-        cover: "/images/CodingImg.jpg",
+        cover: "/images/MyPortfolio.png",
         content: ``,
         tags: ["Daily Life", "Productivity", "Personal"]
     },

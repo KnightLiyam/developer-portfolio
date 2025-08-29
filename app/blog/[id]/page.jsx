@@ -14,7 +14,7 @@ export default function BlogDetail({ params }) {
     <div className="max-w-2xl mx-auto py-12 px-4">
       {/* Back Button */}
       <Link
-        href="/blog"
+        href="/#blog"
         className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 text-white font-medium shadow hover:scale-105 transition-transform w-fit"
       >
         <FaArrowLeft /> Back to Blogs

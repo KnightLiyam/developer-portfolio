@@ -1,7 +1,5 @@
 // @flow strict
 import Link from 'next/link';
-import { CgGitFork } from "react-icons/cg";
-import { IoStar } from "react-icons/io5";
 import { BsLinkedin } from "react-icons/bs";
 
 
@@ -14,7 +12,7 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm">
-            © Developer Portfolio by <Link target="_blank" href="https://www.linkedin.com/in/abu-said-bd/" className="text-[#16f2b3]">Knight</Link>
+            © Developer Portfolio by <Link target="_blank" href="https://www.linkedin.com/in/knight-william-dimapilis/" className="text-[#16f2b3]">Knight</Link>
           </p>
           <div className="flex items-center gap-5">
             <Link
@@ -24,14 +22,8 @@ function Footer() {
             >
               <BsLinkedin size={30} />
             </Link>
-            <Link
-              target="_blank"
-              href="https://github.com/said7388/developer-portfolio/fork"
-              className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
-            >
-              <CgGitFork />
-              <span>Fork</span>
-            </Link>
+            
+             
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.1",
     "@next/third-parties": "15.1.1",
+    "aos": "^2.3.4",
     "axios": "^1.6.8",
     "hamburger-react": "^2.5.2",
     "lottie-react": "^2.4.1",
@@ -22,7 +23,9 @@
     "react-fast-marquee": "^1.6.2",
     "react-google-recaptcha": "^3.1.0",
     "react-icons": "^4.11.0",
+    "react-simple-typewriter": "^5.0.1",
     "react-toastify": "^10.0.4",
+    "react-typed": "^2.0.12",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
