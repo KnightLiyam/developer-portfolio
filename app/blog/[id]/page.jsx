@@ -1,63 +1,88 @@
+"use client";
+
+import React from "react";
 import { myBlogs } from "@/utils/data/my-blogs";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useParams } from "next/navigation"; // 👈 import this
+import BlogPost from "@/app/components/BlogPost";
 
-export default function BlogDetail({ params }) {
-  const blog = myBlogs.find(b => b.id === Number(params.id));
-  if (!blog) return <div className="text-center py-12 text-red-400">Blog not found.</div>;
+export default function BlogDetail() {
+  const params = useParams(); // 👈 use the hook
+  const { id } = params;
 
-  // Split content by [IMAGE] placeholder
-  const contentParts = blog.content.split("[IMAGE]");
+  const blogIndex = myBlogs.findIndex((b) => b.id === Number(id));
+  const blog = myBlogs[blogIndex];
+
+  if (!blog)
+    return (
+      <div className="text-center py-20 text-red-400 text-xl font-medium">
+        Blog not found.
+      </div>
+    );
+
+  const prevBlog = blogIndex > 0 ? myBlogs[blogIndex - 1] : null;
+  const nextBlog = blogIndex < myBlogs.length - 1 ? myBlogs[blogIndex + 1] : null;
+
 
   return (
-    <div className="max-w-2xl mx-auto py-12 px-4">
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -40 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="max-w-3xl mx-auto py-16 px-6 relative"
+    >
       {/* Back Button */}
       <Link
         href="/#blog"
-        className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 text-white font-medium shadow hover:scale-105 transition-transform w-fit"
+        className="inline-flex items-center gap-2 mb-8 px-5 py-2.5 rounded-full 
+                   bg-gradient-to-r from-pink-500 to-violet-600 text-white font-semibold 
+                   shadow-md hover:scale-105 hover:shadow-lg transition-all duration-200"
       >
-        <FaArrowLeft /> Back to Blogs
+        <FaArrowLeft className="text-sm" />
+        Back to Blogs
       </Link>
 
-      <Image
-        src={blog.cover}
-        alt={blog.title}
-        width={600}
-        height={300}
-        className="rounded mb-6 w-full object-cover max-h-72"
-        priority
-      />
-      <h1 className="text-3xl font-bold mb-2 text-white">{blog.title}</h1>
-      <p className="text-gray-400 text-sm mb-4">{blog.date}</p>
-      <div className="flex gap-2 mb-6 flex-wrap">
-        {blog.tags.map(tag => (
-          <span
-            key={tag}
-            className="bg-violet-900 text-violet-300 px-2 py-0.5 rounded-full text-xs"
+      
+
+      {/* Blog Content */}
+      <BlogPost post={blog} />
+
+
+
+      {/* Prev / Next Navigation */}
+      <div className="flex justify-between items-center mt-16 pt-8 border-t border-gray-700">
+        {prevBlog ? (
+          <Link
+            href={`/blog/${prevBlog.id}`}
+            className="group flex items-center gap-2 px-4 py-2 rounded-full 
+                       bg-gradient-to-r from-violet-700 to-violet-500 text-white font-medium
+                       shadow hover:scale-105 hover:shadow-lg transition-all duration-200"
           >
-            #{tag}
-          </span>
-        ))}
+            <FaArrowCircleLeft className="text-lg group-hover:-translate-x-1 transition-transform" />
+            <span className="text-sm sm:text-base">Previous</span>
+          </Link>
+        ) : (
+          <span />
+        )}
+
+        {nextBlog ? (
+          <Link
+            href={`/blog/${nextBlog.id}`}
+            className="group flex items-center gap-2 px-4 py-2 rounded-full 
+                       bg-gradient-to-r from-pink-500 to-violet-600 text-white font-medium
+                       shadow hover:scale-105 hover:shadow-lg transition-all duration-200"
+          >
+            <span className="text-sm sm:text-base">Next</span>
+            <FaArrowCircleRight className="text-lg group-hover:translate-x-1 transition-transform" />
+          </Link>
+        ) : (
+          <span />
+        )}
       </div>
-      <div className="prose prose-invert text-gray-200 max-w-none text-lg">
-        {contentParts.map((part, idx) => (
-          <span key={idx}>
-            {part}
-            {idx < contentParts.length - 1 && (
-              <div className="flex justify-center my-8">
-                <Image
-                  src="/images/OwnitDesigner.jpg"
-                  alt="Own It Designer"
-                  width={400}
-                  height={300}
-                  className="rounded shadow-lg"
-                />
-              </div>
-            )}
-          </span>
-        ))}
-      </div>
-    </div>
+    </motion.div>
   );
 }

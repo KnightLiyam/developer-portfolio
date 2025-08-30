@@ -13,7 +13,6 @@ const Projects = () => {
     setMounted(true);
   }, []);
 
-  // Lock background scroll when modal is open
   useEffect(() => {
     if (modalOpen) {
       const scrollY = window.scrollY;
@@ -51,7 +50,7 @@ const Projects = () => {
             {projectsData.slice(0, 4).map((project, index) => (
               <div
                 data-aos="zoom-in-up"
-                data-aos-delay={index * 100}
+                data-aos-delay={index * 200}
                 id={`sticky-card-${index + 1}`}
                 key={index}
                 className="sticky-card w-full mx-auto max-w-2xl sticky"
@@ -100,7 +99,6 @@ const Projects = () => {
                 }}
                 aria-label="Close modal"
               >
-                {/* Use an SVG icon instead of ✕ */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6"
