@@ -10,7 +10,7 @@ export default function BlogPost({ post }) {
 
             {/* cover */}
             <div className="mb-6 flex justify-center">
-                <div className="w-64 transition-all duration-500 ease-in-out 
+                <div className="w-65 transition-all duration-500 ease-in-out 
                   hover:scale-150 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] 
                   rounded-xl overflow-hidden animate-fadeOn">
                     <Image

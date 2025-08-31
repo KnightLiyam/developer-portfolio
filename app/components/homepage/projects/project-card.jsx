@@ -3,11 +3,9 @@
 
 import * as React from 'react';
 import Image from 'next/image';
-import GlowCard from "../../helper/glow-card";
 
 function ProjectCard({ project, onImageClick }) {
   return (
-    <GlowCard identifier={`project-${project.id || project.name}`}>
       <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
         
         {/* Project Image with Hover Popup Link */}
@@ -103,7 +101,6 @@ function ProjectCard({ project, onImageClick }) {
           </code>
         </div>
       </div>
-    </GlowCard>
   );
 }
 
