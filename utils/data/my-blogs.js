@@ -113,7 +113,7 @@ export const myBlogs = [
 
   </div>
 `
-,
+    ,
 
     tags: ["Projects", "Portfolio", "Web Development"],
   },
@@ -123,61 +123,134 @@ export const myBlogs = [
     date: "2025-08-24",
     cover: "/images/MyPortfolio.png",
     content: `
-  <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">
-    Building My Portfolio with Next.js
-  </h1>
 
-  <p class="text-lg md:text-xl leading-relaxed mb-6">
+   <h2 class="text-2xl font-semibold mt-8 mb-5"> 📂 A Journey of Growth and Creation</h2>
+
+   <p class="text-base md:text-lg leading-loose mb-6">
     When I started working on my portfolio, I knew I didn’t just want a simple static site.  
     I wanted something that would challenge me, help me master the fundamentals of <strong>React</strong> and <strong>Next.js</strong>, and serve as proof of how much I can grow through real projects.
-  </p>
+   </p>
 
-  <p class="text-lg md:text-xl leading-relaxed mb-8">
-    Hi, I’m <strong>Knight William Dimapilis</strong>. I learn faster when I’m building <em>actual projects</em> instead of just following tutorials.  
-    That’s why this portfolio became more than just a showcase — it became my playground for experimenting, customizing, and gaining new frontend skills.
-  </p>
+<p class="text-base md:text-lg leading-loose mb-8">
+  Hi, I’m <strong>Knight William Dimapilis</strong>. I learn faster when I’m building <em>actual projects</em> instead of just following tutorials.  
+  That’s why this portfolio became more than just a showcase — it became my playground for experimenting, customizing, and gaining new frontend skills.
+</p>
 
-  <h2 class="text-2xl md:text-3xl font-semibold mt-10 mb-4">🌱 Starting with a Template</h2>
-  <p class="text-lg leading-relaxed mb-6">
-    Since I was a beginner in Next.js, I decided to use a template as my starting point.  
-    But I didn’t stop there — I worked hard to customize it and turn it into something that truly reflected my style and skills.
-  </p>
+<h2 class="text-xl md:text-2xl font-semibold mt-10 mb-4">🌱 Starting with a Template</h2>
+<p class="text-base leading-loose mb-6">
+  Since I was a beginner in Next.js, I decided to use a template as my starting point.  
+  But I didn’t stop there — I worked hard to customize it and turn it into something that truly reflected my style and skills.
+</p>
 
-  <h2 class="text-2xl md:text-3xl font-semibold mt-10 mb-4">🎨 Customizations I Made</h2>
-  <p class="text-lg leading-relaxed mb-4">
-    I experimented with UI/UX improvements and added interactive elements to make the portfolio unique:
-  </p>
-  <ul class="list-disc ml-6 mb-6">
-    <li>Added a <strong>typewriter animation</strong> in the hero section.</li>
-    <li>Included a fun <strong>404 error Lottiefile animation</strong>.</li>
-    <li>Improved <strong>hover effects</strong> for smoother interactions.</li>
-    <li>Used <strong>AOS (Animate on Scroll)</strong> for clean scroll animations.</li>
-    <li>Enhanced the <strong>Projects Section</strong> with images and a “Visit Project” button.</li>
-    <li>Added an image beside my <strong>Certificates Section</strong> for better visuals.</li>
-    <li>Created a <strong>Blog Section</strong> to share my progress and passion for frontend development.</li>
-  </ul>
+<h2 class="text-xl md:text-2xl font-semibold mt-10 mb-4">🎨 Customizations I Made</h2>
+<p class="text-base leading-loose mb-4">
+  I experimented with UI/UX improvements and added interactive elements to make the portfolio unique:
+</p>
+<ul class="list-disc ml-6 mb-6 text-base md:text-lg">
+  <li>Added a <strong>typewriter animation</strong> in the hero section.</li>
+  <li>Included a fun <strong>404 error Lottiefile animation</strong>.</li>
+  <li>Improved <strong>hover effects</strong> for smoother interactions.</li>
+  <li>Used <strong>AOS (Animate on Scroll)</strong> for clean scroll animations.</li>
+  <li>Enhanced the <strong>Projects Section</strong> with images and a “Visit Project” button.</li>
+  <li>Added an image beside my <strong>Certificates Section</strong> for better visuals.</li>
+  <li>Created a <strong>Blog Section</strong> to share my progress and passion for frontend development.</li>
+</ul>
 
-  <h2 class="text-2xl md:text-3xl font-semibold mt-10 mb-4">📚 Lessons I Learned</h2>
-  <p class="text-lg leading-relaxed mb-6">
-    This project helped me understand the fundamentals of <strong>React components</strong>, <strong>Next.js routing</strong>, and the importance of designing with the <strong>user experience</strong> in mind.  
-    Every small customization boosted my confidence as a frontend developer and reinforced my passion for building interactive websites.
-  </p>
+<h2 class="text-xl md:text-2xl font-semibold mt-10 mb-4">📚 Lessons I Learned</h2>
+<p class="text-base leading-loose mb-6">
+  This project helped me understand the fundamentals of <strong>React components</strong>, <strong>Next.js routing</strong>, and the importance of designing with the <strong>user experience</strong> in mind.  
+  Every small customization boosted my confidence as a frontend developer and reinforced my passion for building interactive websites.
+</p>
 
-  <h2 class="text-2xl md:text-3xl font-semibold mt-10 mb-4">🚀 Looking Ahead</h2>
-  <p class="text-lg leading-relaxed mb-6">
-    Even if this portfolio started from a template, it became a reflection of my effort, creativity, and curiosity.  
-    This is just the beginning — I’m excited to explore more of Next.js and React, and eventually build fully custom projects from scratch.
-  </p>
+<h2 class="text-xl md:text-2xl font-semibold mt-10 mb-4">🚀 Looking Ahead</h2>
+<p class="text-base leading-loose mb-6">
+  Even if this portfolio started from a template, it became a reflection of my effort, creativity, and curiosity.  
+  This is just the beginning — I’m excited to explore more of Next.js and React, and eventually build fully custom projects from scratch.
+</p>
+
 `
-,
+    ,
     tags: ["Daily Life", "Productivity", "Personal"]
   },
   {
     id: 3,
-    title: "A Day in My Life as a Developer",
+    title: "How I Live, Code, and Grow as an aspiring Front-end Developer",
     date: "2025-08-24",
-    cover: "/images/CodingImg.jpg",
-    content: ``,
+    cover: "/images/Github1.png",
+    content: `
+  <h2 class="text-2xl font-semibold mt-8 mb-5">💻 A Day in My Life as a React Developer</h2>
+
+  <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+    <div class="md:w-1/2">
+      <p class="text-lg leading-loose mb-6">
+        For me, being a React developer is not just about writing code—it’s about building meaningful experiences. 
+        I enjoy working on front-end projects where ideas turn into interactive applications, 
+        and I’m always excited to explore new ways to improve my craft. 
+        My main tools are <strong>JavaScript</strong>, <strong>React</strong>, <strong>Next.js</strong>, 
+        and <strong>Tailwind CSS</strong>, which give me both flexibility and creativity when developing projects.
+      </p>
+    </div>
+
+   
+  </div>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-3">☕ Coding Beyond the Desk</h2>
+  <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+    <div class="md:w-1/2">
+      <p class="text-base leading-loose mb-4">
+        One of my favorite ways to work is in <strong>coffee shops</strong>. 
+        The environment—soft background noise, the aroma of coffee, and a change of scenery—helps me focus and think clearly. 
+        Stepping out of my usual workspace often sparks fresh ideas and makes problem-solving feel more natural.
+      </p>
+    </div>
+
+   <div class="md:w-1/2">
+      <img 
+        src="/images/kapeee.jpg" 
+        alt="CoffeeisLife"
+        class="w-40 md:w-53 rounded-xl shadow-md transition-all duration-500 ease-in-out 
+               scale-90 hover:scale-125 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] animate-fadeOn"
+      />
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-3">⚡ Staying Balanced for Productivity</h2>
+  <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+    <div class="md:w-1/2">
+      <p class="text-base leading-loose mb-4">
+        I’ve learned that real productivity doesn’t come from long hours alone—it comes from <strong>balance</strong>. 
+        Running helps me clear my thoughts, workouts keep me energized, 
+        and even playing games occasionally gives me a healthy break. 
+        These routines prevent burnout and allow me to return to my projects with focus and creativity.
+      </p>
+    </div>
+
+    <div class="md:w-1/2">
+      <img 
+        src="/images/Strava.jpg" 
+        alt="Running for balance" 
+        class="w-40 md:w-53 rounded-xl shadow-md transition-all duration-500 ease-in-out 
+               scale-90 hover:scale-125 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] animate-fadeOn"
+      />
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-3">🚀 Moving Forward</h2>
+  <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+    <div class="md:w-1/2">
+      <p class="text-base leading-loose mb-4">
+        Each project I complete is more than just code—it’s a reflection of my growth and passion as a developer. 
+        By combining technical skills with a balanced lifestyle, I aim to build applications that not only work well 
+        but also deliver great experiences. 
+      </p>
+      <p class="text-base leading-loose mb-6">
+        With consistent practice, curiosity, and yes—a good cup of coffee—I’m excited to keep growing as a 
+        <strong>React developer</strong>.
+      </p>
+    </div>
+  </div>
+`,
+
     tags: ["Daily Life", "Productivity", "Personal"]
   }
 ];

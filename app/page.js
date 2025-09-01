@@ -9,6 +9,7 @@ import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 import BlogsPage from "./blog/page";
+import Navbar from "./components/navbar";
 
 
 async function getData() {

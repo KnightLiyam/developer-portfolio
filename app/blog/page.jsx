@@ -101,9 +101,14 @@ export default function BlogsPage() {
                     </div>
 
                     {/* Summary */}
-                    <p className="text-gray-200 flex-1 mb-4 line-clamp-3 leading-relaxed">
-                      {blog.summary || blog.content?.slice(0, 100) + "..."}
-                    </p>
+                    <div
+                      className="text-gray-200 flex-1 mb-4 line-clamp-3 leading-relaxed prose prose-invert prose-sm max-w-none"
+                      dangerouslySetInnerHTML={{
+                        __html: blog.summary || blog.content?.slice(0, 100) + "..."
+                      }}
+                    />
+
+
                   </div>
                 </Link>
               </GlowCard>
