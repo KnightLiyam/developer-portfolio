@@ -104,7 +104,7 @@ function ProjectCard({ project, onImageClick }) {
           </div>
           <div>
             <span className="ml-4 mr-2 text-white">name:</span>
-            <span className="text-amber-300">"{project.name}",</span>
+            <span className="text-amber-300">`{project.name}`,</span>
           </div>
           <div className="ml-4 flex flex-wrap items-center">
             <span className="text-white">tools:</span>
@@ -127,7 +127,7 @@ function ProjectCard({ project, onImageClick }) {
           </div>
           <div className="ml-4">
             <span className="text-white">description:</span>
-            <span className="text-cyan-400"> "{project.description}"</span>
+            <span className="text-cyan-400"> `{project.description}`</span>
           </div>
           <div>
             <span className="text-gray-400">{"};"}</span>

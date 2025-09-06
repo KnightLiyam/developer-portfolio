@@ -55,7 +55,16 @@ export default function BlogsPage() {
         <div
           data-aos="zoom-in-up"
           data-aos-delay="100"
-          className="grid md:grid-cols-3 gap-10 lg:gap-16 px-4 lg:px-8"
+          className="
+      grid 
+      grid-cols-1        /* 📱 Default: 1 column */
+      sm:grid-cols-2     /* 📱➡️💻 Small screens: 2 columns */
+      lg:grid-cols-3     /* 💻 Large screens: 3 columns */
+      gap-6              /* base spacing */
+      sm:gap-8           /* more spacing on sm+ */
+      lg:gap-12          /* even more on large screens */
+      px-4 sm:px-6 lg:px-8
+    "
         >
           {myBlogs.slice(0, 3).map((blog) => {
             const readingTime = getReadingTime(blog.content);
@@ -64,8 +73,8 @@ export default function BlogsPage() {
                 <Link
                   href={`/blog/${blog.id}`}
                   className="group bg-gradient-to-br from-[#232946] via-[#1a174d] to-[#181c2f] rounded-2xl 
-                             shadow-xl hover:shadow-2xl transition-all duration-300 p-0 flex flex-col 
-                             border border-[#38f9d7]/20 hover:border-[#38f9d7]/60 relative overflow-hidden"
+                       shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col 
+                       border border-[#38f9d7]/20 hover:border-[#38f9d7]/60 relative overflow-hidden"
                 >
                   {/* Decorative corner accent */}
                   <span className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-[#38f9d7]/30 via-[#43e97b]/20 to-[#4f5bd5]/20 rounded-br-3xl opacity-60 pointer-events-none" />
@@ -77,25 +86,25 @@ export default function BlogsPage() {
                       alt={blog.title}
                       width={400}
                       height={200}
-                      className="rounded-t-2xl object-cover w-full h-48 group-hover:scale-105 transition-transform duration-500"
+                      className="rounded-t-2xl object-cover w-full h-48 sm:h-56 lg:h-64 group-hover:scale-105 transition-transform duration-500"
                     />
 
                     {/* Hover overlay with button */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 rounded-t-2xl">
-                      <span className="bg-[#181c2f]/80 px-5 py-2 rounded-full text-[#38f9d7] font-semibold text-base shadow-lg border border-[#38f9d7]/30 hover:bg-[#38f9d7]/20 hover:text-white transition-colors duration-200">
+                      <span className="bg-[#181c2f]/80 px-4 py-2 sm:px-5 sm:py-2 rounded-full text-[#38f9d7] font-semibold text-sm sm:text-base shadow-lg border border-[#38f9d7]/30 hover:bg-[#38f9d7]/20 hover:text-white transition-colors duration-200">
                         Read Blog ↗
                       </span>
                     </div>
                   </div>
 
                   {/* Blog Content */}
-                  <div className="flex-1 flex flex-col p-6">
-                    <h2 className="font-bold text-xl mb-2 bg-gradient-to-r from-[#38f9d7] to-[#43e97b] bg-clip-text text-transparent group-hover:from-[#43e97b] group-hover:to-[#4f5bd5] transition-colors truncate">
+                  <div className="flex-1 flex flex-col p-4 sm:p-6">
+                    <h2 className="font-bold text-lg sm:text-xl mb-2 bg-gradient-to-r from-[#38f9d7] to-[#43e97b] bg-clip-text text-transparent group-hover:from-[#43e97b] group-hover:to-[#4f5bd5] transition-colors truncate">
                       {blog.title}
                     </h2>
 
                     {/* Date + Reading Time */}
-                    <div className="flex items-center justify-between text-xs text-gray-400 mb-3">
+                    <div className="flex items-center justify-between text-xs sm:text-sm text-gray-400 mb-3">
                       <p>{blog.date}</p>
                       <p>⏱ {readingTime} min read</p>
                     </div>
@@ -107,8 +116,6 @@ export default function BlogsPage() {
                         __html: blog.summary || blog.content?.slice(0, 100) + "..."
                       }}
                     />
-
-
                   </div>
                 </Link>
               </GlowCard>
@@ -116,6 +123,7 @@ export default function BlogsPage() {
           })}
         </div>
       </div>
+
     </div>
   );
 }

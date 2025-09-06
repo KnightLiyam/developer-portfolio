@@ -80,7 +80,7 @@ const Projects = () => {
             onClick={() => setModalOpen(false)}
           >
             <div
-              className="relative animate-fadeIn"
+              className="relative "
               onClick={(e) => e.stopPropagation()}
             >
               {/* Project Image */}
@@ -115,7 +115,7 @@ const Projects = () => {
             {/* Animation Keyframes */}
             <style>{`
         @keyframes fadeIn {
-          from { opacity: 0; transform: scale(0.95);}
+          from { opacity: 0; transform: scale(0.5);}
           to { opacity: 1; transform: scale(1);}
         }
         .animate-fadeIn {

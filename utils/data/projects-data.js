@@ -8,7 +8,7 @@ export const projectsData = [
         tools: ['Node JS', 'JavaScript', 'Gemini Flash 2.0', 'Figma', 'VS Code', 'Next JS', 'TypeScript', 'Tailwind CSS', 'Supabase'],
         role: 'Assistant Developer',
         code: '',
-        demo: '/images/OwnitDemo.mp4',
+        demo: '/videos/OwnitDemo.mp4',
         image: '/images/OWN!T_DB.png',
     },
     {
@@ -19,7 +19,7 @@ export const projectsData = [
         tools: ['HTML', 'CSS', 'JavaScript'],
         role: 'Front-end Developer',
         code: '',
-        demo: '/images/OwnitDemo.mp4',
+        demo: '/videos/OwnitDemo.mp4',
         image: '/images/TicTacToe.png',
     },
     {
@@ -29,7 +29,7 @@ export const projectsData = [
         tools: ['React', 'Next JS', 'Tailwind CSS'],
         code: '',
         role: 'Front-end Developer',
-        demo: '/images/OwnitDemo.mp4',
+        demo: '/videos/OwnitDemo.mp4',
         image: '/images/MyPortfolio.png',
         url: 'https://github.com/KnightLiyam/Tic-Tac-Toe',
 
@@ -37,11 +37,11 @@ export const projectsData = [
     },
     {
         id: 4,
-        name: 'Ticketing System',
+        name: 'KnightPass - Ticketing System',
         description: "A ticketing system that allows users to create, view, and manage tickets. It is built using React, Node.js, and MongoDB. The system provides a user-friendly interface for managing tickets and includes features such as ticket creation, status updates, and user authentication.",
         tools: ['React', 'JavaScript', 'Tailwind CSS'],
         code: '',
-        demo: '/images/OwnitDemo.mp4',
+        demo: '/videos/KnightPassDemo.mp4',
         role: 'Front-end Developer',
         image: '/images/TicketingSysClone.png',
         url: 'https://github.com/KnightLiyam/Tic-Tac-Toe',
